@@ -39,6 +39,6 @@ We are sourcing our data from the following dataset on Kaggle:
 
 * Main communication will be through our Slack channel 
 * Meet twice weekly via Zoom
- * Monday & Wednesday 7-9pm
+    * Monday & Wednesday 7-9pm
 * Add additional zoom meetings if needed
- * Thurs-Sun time frame
+    * Thurs-Sun timeframe
