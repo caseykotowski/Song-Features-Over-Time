@@ -48,3 +48,7 @@ We are using Amazon RDS Database to store our data. The DB identifier is spotify
 
 [Spotify Databse](https://us-east-2.console.aws.amazon.com/rds/home?region=us-east-2#databases:)
 
+The following image is the logical ERD that will serve as the model for our database:
+
+![ERD.png](Images/ERD.png)
+
