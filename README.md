@@ -42,3 +42,9 @@ We are sourcing our data from the following dataset on Kaggle:
     * Monday & Wednesday 7-9pm
 * Add additional zoom meetings if needed
     * Thurs-Sun timeframe
+
+## Database
+We are using Amazon RDS Database to store our data. The DB identifier is spotify at the following webiste:
+
+[Spotify Databse](https://us-east-2.console.aws.amazon.com/rds/home?region=us-east-2#databases:)
+
