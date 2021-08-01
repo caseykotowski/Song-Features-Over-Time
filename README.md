@@ -57,11 +57,11 @@ The following image is the logical ERD that will serve as the model for our data
 The unsupervised hierarchical clustering is a feasible machine learning algorithm that can be used to breakdown and organize genres in the Spotify Track Database.
 A dendrogram could be useful to identify the appropriate number of clusters or genres by identifying tracks that are similar based on key characteristics, such as acousticness, danceability, energy, etc.
 
+Example of dendrogram:
 ![data-18-6-3-3-resulting-dendrogram-three-clusters](https://user-images.githubusercontent.com/81447450/127786442-a1cf0610-42e8-41d3-8205-03db57a3538c.png)
-Example of dendrogram
 
-To run the hierarchical clustering algorithm, we can run Agglomerative Clustering from Scikit Learn package and use the cluster number identified in the the dendrogram. Pseudocode for the algorithm:
-
+To run the hierarchical clustering algorithm, we can run Agglomerative Clustering from Scikit Learn package and use the cluster number identified in the the dendrogram. 
+[Pseudo Code for algorithm]()
 
 This algorithm can possibly used to predict how a song will be categorized in genre. 
 
