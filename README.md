@@ -61,7 +61,7 @@ Example of dendrogram:
 ![data-18-6-3-3-resulting-dendrogram-three-clusters](https://user-images.githubusercontent.com/81447450/127786442-a1cf0610-42e8-41d3-8205-03db57a3538c.png)
 
 To run the hierarchical clustering algorithm, we can run Agglomerative Clustering from Scikit Learn package and use the cluster number identified in the the dendrogram. 
-[Pseudo Code for algorithm]()
+[Pseudo Code for algorithm](https://github.com/caseykotowski/Song-Features-Over-Time/blob/6e4e8af93799df650a785f97095db41907ec8f09/Pseudo_Code_S1_Machine_Learning.ipynb)
 
 This algorithm can possibly used to predict how a song will be categorized in genre. 
 
