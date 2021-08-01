@@ -52,3 +52,6 @@ The following image is the logical ERD that will serve as the model for our data
 
 ![ERD.png](Images/ERD.png)
 
+## Machine Learning
+
+
