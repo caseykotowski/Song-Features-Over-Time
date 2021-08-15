@@ -66,3 +66,60 @@ To run the hierarchical clustering algorithm, we can run Agglomerative Clusterin
 
 This algorithm can possibly used to predict how a song will be categorized by genre. 
 
+### Data preprocessing 
+
+To begin preprocessing, I used pyspark to load in the data from our AWS database. 
+However, I want to use Pandas to work with the data, so I converted the pyspark dataframes
+to pandas dataframes. 
+Once in Pandas, I merged the tracks and artists dataframes on the name of the artist so we could
+see the genres by track. 
+I pulled the data types for each column, so I knew what I would need to convert.
+Next, I dropped columns that I did not find relevant to the clustering process, which I will discuss further
+in the feature selection section. 
+The remaining columns were all numeric in nature, but were still in an object datatype, so 
+I converted all columns to floats. Machine learning algorithms need numeric columns to properly cluster.
+Next, I filtered by popularity over 50. More popular songs seem more likely to be closer to the definition of what their genre is, 
+also there is a very large amount of data. In the interest of time, it makes more sense to filter down how much
+data we are putting into the model. I chose popularity above 50 because those songs are more popular than not at that point, which
+will show us if popular music is closer to the definitions of their respective genres.
+Next, I dropped any null columns. We have so much data that losing a few rows will not impact our model.
+
+Finally, I created a random sample dataframe from the spotify df. The final dataframe has too much 
+data to run the models with the amount of RAM on my computer. 
+
+### Feature Engineering 
+
+I chose to drop the following columns:
+'id', 'name', 'duration_ms', 'explicit', 'artists', 'release_date', 'followers', 'genres', 'id_artists'
+
+I chose to keep the following columns:
+'popularity', 'danceability', 'energy', 'loudness', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'key', 'mode', 'time_signature'
+
+The name, artists, and release date columns could not meaningfully be converted to numbers that would effect genre clustering. 
+The ID, explicit, followers, and ID_Artists columns, while numeric, are numbers that don't have meaning as a number. Followers is also a number that is similar to popularity, 
+but not scaled. 
+
+As I am using two unsupervised machine learning algorithms, so there is no target column. Therefore, I also chose to remove the genre column as the question we are asking
+is whether or not our algorthims can predict the genre. 
+
+The remaining columns are all features of the song that directly contribute to the genre, and are all numeric in the same scale. Very minimal scaling needed to be done to these columns.
+
+### Train Test Splits 
+ 
+There is no test train split in unsupervised learning, however I took a random sample of the data frame. I chose the number of rows by trial and error of how
+many rows I could include before receiving the lack of RAM error again.
+
+### Model Choice
+
+I tested two methods of machine learning :Dendrograph/hierarchical clustering and K-means clustering. 
+The main difference is that for k means, we need to pick a k number of clusters ahead of time, whereas hierarchical show us levels of clusters and we pick what makes sense. 
+
+For the k means, we can utilize the elbow graph to show where the number of clusters increasing no longer causes massive differences in the clusters, but I 
+think for music genres, hierarchical clustering makes more sense.
+
+The way that Spotify defines genres can become very specific, with reference to more general genres. With the dendrographs, we can see what the clusters look like 
+when we desire the predicitons of more specific clusters versus the more general genres. 
+
+The main limitation of the dendrograph is that it is difficult to view the clusters at the more specific levels. I am also not sure how the models would look if I was
+able to use the full data set. 
+
