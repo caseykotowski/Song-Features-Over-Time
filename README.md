@@ -52,6 +52,40 @@ The following image is the logical ERD that will serve as the model for our data
 
 ![ERD.png](Images/ERD.png)
 
+We updated our ERD to simplify the tables we are using. We will only need track and artist information to analyze spotify genre data. The following tables were created:
+
+**track_info
+* id (PK)
+* name
+* popularity
+* duration_ms
+* explicit
+* artists
+* release_date
+* danceability
+* key
+* id_artists (FK)
+* energy
+* loudness
+* mode
+* speechiness
+* acousticness
+* instrumentalness
+* liveness
+* valence
+* tempo
+* time_signature
+
+**artist_info
+* id (PK) 
+* name
+* genres
+* popularity
+
+A new ERD was created:
+![QuickDBD-Free Diagram](https://user-images.githubusercontent.com/81447450/129500744-0caeabba-8d61-46bf-b458-e975eb8ad57e.png)
+
+
 ## Machine Learning
 
 The unsupervised **hierarchical clustering** is a feasible machine learning algorithm that can be used to breakdown and organize genres in the Spotify Track Database. This algorithm is preferred since it does not require a known cluster number, uses a dendrogram to identify cluster numbers, and is good for grouping data. Down sides of using the hierarchical clustering algorithm is that larger datasets increase run time and the dendrogram could be more confusing than helpful if there are too many clusters.
