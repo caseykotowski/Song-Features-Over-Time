@@ -94,6 +94,8 @@ See our loading data code:
 [mcc_loading_data.ipynb](https://github.com/caseykotowski/Song-Features-Over-Time/blob/1baf83a51f3a9f009a07d9ba279b896105bdd07e/DataBase%20S2/MCC_Loading_Data.ipynb)
 
 <img width="227" alt="Full outer join of 2 tables" src="https://user-images.githubusercontent.com/81447450/129501027-02c417fc-1baa-4107-8a9d-711e3591d9c6.png">
+<img width="196" alt="PGAdmin 4 tables" src="https://user-images.githubusercontent.com/81447450/129502526-358ab1f2-eed7-4da7-9d47-a80a50fe3876.png">
+
 
 Further data clean up will have to be performed either prior to uploading to RDS or on pgAdmin since there are some fields with odd formatting (i.e. dates, genres, artists). Formatting those fields could help with data analysis and visualization.  
 
