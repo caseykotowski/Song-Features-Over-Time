@@ -44,9 +44,9 @@ We are sourcing our data from the following dataset on Kaggle:
     * Thurs-Sun timeframe
 
 ## Database
-We are using Amazon RDS Database to store our data. The DB identifier is spotify at the following webiste:
+To store our data we are using the S3 app in AWS. We will be uploading all relevant raw CSV files into a bucket for easy and remote access. We are using Amazon RDS Database to store our data post ETL. The DB identifier is spotify-db in RDS:
 
-[Spotify Databse](https://us-east-2.console.aws.amazon.com/rds/home?region=us-east-2#databases:)
+[Spotify Databse](https://us-east-2.console.aws.amazon.com/rds/home?region=us-east-2#database:id=spotify-db;is-cluster=false;tab=connectivity)
 
 The following image is the logical ERD that will serve as the model for our database:
 
