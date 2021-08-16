@@ -54,7 +54,7 @@ The following image is the logical ERD that will serve as the model for our data
 
 We updated our ERD to simplify the tables we are using. We will only need track and artist information to analyze spotify genre data. The following tables were created:
 
-**track_info
+**track_info**
 * id (PK)
 * name
 * popularity
@@ -76,14 +76,19 @@ We updated our ERD to simplify the tables we are using. We will only need track 
 * tempo
 * time_signature
 
-**artist_info
+**artist_info**
 * id (PK) 
 * name
 * genres
 * popularity
 
 A new ERD was created:
+
 ![QuickDBD-Free Diagram](https://user-images.githubusercontent.com/81447450/129500744-0caeabba-8d61-46bf-b458-e975eb8ad57e.png)
+
+To clean up the large data set, the "followers" column was removed. Nulls and duplicates were also removed from the track table. 
+To add genres to tracks, a full outer join was performed with the track_info and artist_info.
+<img width="227" alt="Full outer join of 2 tables" src="https://user-images.githubusercontent.com/81447450/129501027-02c417fc-1baa-4107-8a9d-711e3591d9c6.png">
 
 
 ## Machine Learning
