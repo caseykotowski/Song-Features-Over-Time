@@ -1,0 +1,37 @@
+CREATE TABLE artist_info (
+id VARCHAR PRIMARY KEY NOT NULL,
+name VARCHAR NOT NULL,
+genres VARCHAR NOT NULL,
+popularity VARCHAR NOT NULL
+);
+
+CREATE TABLE track_info (
+id TEXT PRIMARY KEY NOT NULL,
+name VARCHAR,
+popularity VARCHAR,
+duration_ms VARCHAR,
+explicit VARCHAR,
+artists VARCHAR,
+release_date VARCHAR,
+danceability VARCHAR,
+key VARCHAR,
+id_artists VARCHAR,
+energy VARCHAR,
+loudness VARCHAR,
+mode VARCHAR,
+speechiness VARCHAR,
+acousticness VARCHAR,
+instrumentalness VARCHAR,
+liveness VARCHAR,
+valence VARCHAR,
+tempo VARCHAR,
+time_signature VARCHAR
+);
+
+SELECT * FROM artist_info;
+SELECT * FROM track_info;
+
+SELECT * 
+FROM track_info
+LEFT JOIN artist_info 
+ON track_info.id_artists = artist_info.id;
