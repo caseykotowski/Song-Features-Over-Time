@@ -91,7 +91,7 @@ To add genres to tracks, a full outer join was performed with the track_info and
 
 See our loading data code:
 
-[mcc_loading_data.ipynb](https://github.com/caseykotowski/Song-Features-Over-Time/blob/b51ac8d51e641cc167ad5460b62477a39a9c0dba/DataBase%20S2/MCC_Loading_Data.ipynb)
+[mcc_loading_data.ipynb](https://github.com/caseykotowski/Song-Features-Over-Time/blob/1baf83a51f3a9f009a07d9ba279b896105bdd07e/DataBase%20S2/MCC_Loading_Data.ipynb)
 
 <img width="227" alt="Full outer join of 2 tables" src="https://user-images.githubusercontent.com/81447450/129501027-02c417fc-1baa-4107-8a9d-711e3591d9c6.png">
 
