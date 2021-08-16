@@ -88,8 +88,10 @@ A new ERD was created:
 
 To clean up the large data set, the "followers" column was removed. Nulls and duplicates were also removed from the track table. 
 To add genres to tracks, a full outer join was performed with the track_info and artist_info.
+
 <img width="227" alt="Full outer join of 2 tables" src="https://user-images.githubusercontent.com/81447450/129501027-02c417fc-1baa-4107-8a9d-711e3591d9c6.png">
 
+Further data clean up will have to be performed either prior to uploading to RDS or on pgAdmin since there are some fields with odd formatting (i.e. dates, genres, artists). Formatting those fields could help with data analysis and visualization.  
 
 ## Machine Learning
 
