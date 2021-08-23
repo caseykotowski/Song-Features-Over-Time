@@ -34,15 +34,6 @@ We are sourcing our data from the following dataset on Kaggle:
 
 [Spotify Dataset 1922-2021](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks)
 
-
-## Project Team Communication Protocol 
-
-* Main communication will be through our Slack channel 
-* Meet twice weekly via Zoom
-    * Monday & Wednesday 7-9pm
-* Add additional zoom meetings if needed
-    * Thurs-Sun timeframe
-
 ## Database
 To store our data we are using the S3 app in AWS. We will be uploading all relevant raw CSV files into a bucket for easy and remote access. We are using Amazon RDS Database to store our data post ETL. The DB identifier is spotify-db in RDS:
 
@@ -170,3 +161,5 @@ when we desire the predicitons of more specific clusters versus the more general
 The main limitation of the dendrograph is that it is difficult to view the clusters at the more specific levels. I am also not sure how the models would look if I was
 able to use the full data set. 
 
+## Presentation
+[Here](https://docs.google.com/presentation/d/1drdctnRB5V6veMMkMxqcyIkXErnrki4hEWzcr4ig6Rs/edit?usp=sharing) is a link to a presentation discussing this work.
