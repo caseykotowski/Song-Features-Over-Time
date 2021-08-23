@@ -1,7 +1,7 @@
 CREATE TABLE artist_info (
 id VARCHAR PRIMARY KEY NOT NULL,
-name VARCHAR NOT NULL,
 genres VARCHAR NOT NULL,
+name VARCHAR NOT NULL,
 popularity VARCHAR NOT NULL
 );
 
@@ -30,8 +30,3 @@ time_signature VARCHAR
 
 SELECT * FROM artist_info;
 SELECT * FROM track_info;
-
-SELECT * 
-FROM track_info
-LEFT JOIN artist_info 
-ON track_info.id_artists = artist_info.id;
