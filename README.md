@@ -77,7 +77,10 @@ A new ERD was created:
 
 ![QuickDBD-Free Diagram](https://user-images.githubusercontent.com/81447450/129500744-0caeabba-8d61-46bf-b458-e975eb8ad57e.png)
 
-To clean up the large data set, the "followers" column was removed. Nulls and duplicates were also removed from the track table. 
+## Data clean up
+
+Prior to loading some clean up was required in the CSV. There were commas inside cells that interfered with the column assignment when uploaded. Commas were removed in the name columns and commas were replaced by semi-colons in the genre and artist fields. The csv files were then stored in S3 bucket. To clean up the large data set, the "followers" column was removed from the artist table. Nulls and duplicates were also removed from the track table. Genres, names and id_artists were formatted to remove the [] and '' in the data set.
+
 To add genres to tracks, a full outer join was performed with the track_info and artist_info in pgAdmin. This can also be done in the colab notebook code to make a permanent join.
 
 See our loading data code:
