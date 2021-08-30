@@ -168,4 +168,4 @@ able to use the full data set.
 [Here](https://docs.google.com/presentation/d/1drdctnRB5V6veMMkMxqcyIkXErnrki4hEWzcr4ig6Rs/edit?usp=sharing) is a link to a presentation discussing this work.
 
 ## Dashboard
-[Here](https://public.tableau.com/app/profile/monse2502/viz/SpotifyGenreDashboard/Story1) is a link to our dashboard for this work. 
+[Here](https://public.tableau.com/app/profile/monse2502/viz/SpotifyGenreDashboard/Story1?publish=yes) is a link to our dashboard for this work. 
